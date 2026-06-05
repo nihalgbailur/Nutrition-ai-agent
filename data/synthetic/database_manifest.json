@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "description": "Synthetic seed files for NutriPlan SQLite database",
+  "files": {
+    "profiles": "profiles.json",
+    "pantry": "pantry_items.json",
+    "recipes": "recipes.json",
+    "meal_plan": "meal_plan.json",
+    "shopping_list": "shopping_list.json",
+    "feedback": "feedback.json",
+    "kb_extension": "packaged_foods_synthetic.json",
+    "txt_corpus": [
+      "txt/knowledge_corpus.txt",
+      "txt/recipes_corpus.txt",
+      "txt/pantry_corpus.txt"
+    ]
+  },
+  "default_profile_index": 0
+}

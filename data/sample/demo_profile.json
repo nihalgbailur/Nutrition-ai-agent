@@ -1,0 +1,21 @@
+{
+  "name": "Nihal",
+  "diet_style": "vegetarian",
+  "health_goal": "maintenance",
+  "allergies": [],
+  "cuisine_preferences": ["North Indian", "South Indian"],
+  "spice_level": "medium",
+  "max_cook_minutes": 30,
+  "budget_level": "medium",
+  "health_flags": {
+    "has_medical_condition": false,
+    "medical_notes": "",
+    "is_pregnant_or_breastfeeding": false,
+    "cooking_for_children": false,
+    "cooking_for_elderly": false,
+    "requires_plan_confirmation": false
+  },
+  "disliked_ingredients": [],
+  "preferred_ingredients": ["dal", "roti"],
+  "limit_packaged_snacks": false
+}

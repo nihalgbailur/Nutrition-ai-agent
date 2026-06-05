@@ -1,0 +1,16 @@
+# NutriPlan AI — Indian Packaged Foods Knowledge Corpus (synthetic + curated)
+# Format: CATEGORY | TYPE | PRODUCT | CONCERNS | NOTE
+
+Biscuits_Cookies | poor | Parle-G Original | high_sugar,refined_carb | Classic glucose biscuit; low fiber; easy to overeat with tea.
+Biscuits_Cookies | better | Millet Cookies Ragi/Jowar | higher_fiber | Millet-based; often lower sugar than maida biscuits.
+Savory_Snacks | poor | Haldiram Bhujia | very_high_sodium,high_fat | Very salty fried snack; limit frequency.
+Savory_Snacks | better | Roasted Makhana plain | low_fat,high_fiber | Lighter volume snack when lightly seasoned.
+Instant_Noodles | poor | Maggi Masala Noodles | very_high_sodium,refined_carb | High salt per pack; occasional treat not daily staple.
+Instant_Noodles | better | Homemade veg noodles | controllable_sodium | Use whole wheat noodles + lots of vegetables.
+Beverages | poor | Coca-Cola 300ml | very_high_sugar | Empty calories; swap for chaas or lemon water.
+Beverages | better | Buttermilk Chaas | probiotics,electrolytes | Traditional low-sugar hydrating option.
+Breakfast_Cereals | poor | Kellogg's Chocos | high_sugar | Chocolate cereal; treat as dessert not breakfast daily.
+Breakfast_Cereals | better | Plain rolled oats | high_fiber | Cook with milk; add fruit; avoid pre-sweetened packs.
+Instant_Foods_Extras | poor | Ching's Schezwan Noodles | high_sodium,additives | Indo-Chinese instant; salty seasoning sachet.
+Sweets_Mithai | poor | Gulab Jamun tinned | very_high_sugar,high_fat | Festival portions should be small.
+Frozen_Ready | poor | Frozen veg burger patty | high_sodium,additives | Often fried; check labels for salt.

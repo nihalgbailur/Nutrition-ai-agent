@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* NutriPlan premium theme - light (elevated from original) */
+  --np-green: #1a3c34;
+  --np-green-dark: #0f2a24;
+  --np-green-light: #2a5c50;
+  --np-gold: #e6a817;
+  --np-gold-dark: #c48a0a;
+  --np-bg: #f7faf8;
+  --np-border: #e2ebe6;
+  --np-text: #1f2e2a;
+  --np-text-muted: #4a635c;
+  --np-warning: #fff8e6;
+  --np-warning-border: #e6a817;
+  --np-card-bg: linear-gradient(145deg, #ffffff 0%, #f7faf8 100%);
+
+  /* Component tokens */
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+
+/* Dark mode - rich, luxurious, high contrast */
+.dark {
+  --np-green: #4a8f7a;
+  --np-green-dark: #2f6b58;
+  --np-green-light: #6bb89e;
+  --np-gold: #f0c14a;
+  --np-gold-dark: #d4a017;
+  --np-bg: #0f1715;
+  --np-border: #2a3a36;
+  --np-text: #e6f0ed;
+  --np-text-muted: #8fa8a0;
+  --np-warning: #2a2418;
+  --np-warning-border: #f0c14a;
+  --np-card-bg: linear-gradient(145deg, #16221f 0%, #0f1715 100%);
+}
+
+@theme inline {
+  --color-background: var(--np-bg);
+  --color-foreground: var(--np-text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Base */
+body {
+  font-family: var(--font-geist-sans);
+  background: var(--np-bg);
+  color: var(--np-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  color: var(--np-green);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Premium card (from original .card) */
+.card {
+  background: var(--np-card-bg);
+  border: 1px solid var(--np-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 12px rgba(26, 60, 52, 0.06);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(26, 60, 52, 0.08);
+}
+
+/* Disclaimer (exact spirit of original) */
+.disclaimer-box {
+  background: var(--np-warning);
+  border-left: 4px solid var(--np-gold);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: #5c4a1a;
+  margin: 0.75rem 0;
+}
+
+/* Nutrition + KB badges (port + polish) */
+.nutrition-tag {
+  display: inline-block;
+  background: #e8f4ef;
+  color: #1a5c45;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-right: 0.35rem;
+}
+
+.kb-badge {
+  background: #fdeee8;
+  color: #9a3b20;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+/* Agent pill (prominent, used in chat + status) */
+.agent-pill {
+  background: var(--np-green);
+  color: #fff;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Buttons - premium feel */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.1s ease;
+  border: 1px solid transparent;
+}
+.btn-primary {
+  background: var(--np-green);
+  color: white;
+}
+.btn-primary:hover {
+  background: var(--np-green-dark);
+}
+.btn-secondary {
+  background: var(--np-bg);
+  color: var(--np-green);
+  border-color: var(--np-border);
+}
+.btn-secondary:hover {
+  background: var(--np-card-bg);
+  border-color: var(--np-green);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--np-text-muted);
+}
+.btn-ghost:hover {
+  background: rgba(0,0,0,0.04);
+}
+.dark .btn-ghost:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+/* Form polish */
+input, textarea, select {
+  border: 1px solid var(--np-border);
+  background: var(--np-bg);
+  color: var(--np-text);
+  border-radius: 10px;
+  padding: 0.55rem 0.85rem;
+  font-size: 0.95rem;
+  transition: border-color .1s, box-shadow .1s;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--np-green);
+  box-shadow: 0 0 0 3px rgba(74, 143, 122, 0.15);
+}
+
+/* Sidebar / nav */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+  color: var(--np-text-muted);
+  font-weight: 500;
+  transition: all 0.1s;
+}
+.nav-link:hover {
+  background: rgba(0,0,0,0.04);
+  color: var(--np-green);
+}
+.dark .nav-link:hover {
+  background: rgba(255,255,255,0.06);
+}
+.nav-link.active {
+  background: var(--np-green);
+  color: white;
+}
+
+/* Loading narrative / status */
+.agent-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+.agent-step.active {
+  background: rgba(74, 143, 122, 0.15);
+  color: var(--np-green);
+  font-weight: 600;
+}
+.agent-step.done {
+  color: var(--np-green-light);
+}
+
+/* Chat bubbles */
+.chat-bubble-user {
+  background: var(--np-green);
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+  padding: 0.65rem 1rem;
+  max-width: 80%;
+}
+.chat-bubble-assistant {
+  background: var(--np-card-bg);
+  border: 1px solid var(--np-border);
+  border-radius: 18px 18px 18px 4px;
+  padding: 0.65rem 1rem;
+  max-width: 80%;
+}
+
+/* Misc */
+.metric {
+  background: var(--np-card-bg);
+  border: 1px solid var(--np-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+.section-header {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--np-green);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+}

@@ -1,0 +1,20 @@
+[
+  {"name": "Onion", "category": "Vegetables", "quantity": "4 medium", "is_packaged": false},
+  {"name": "Tomato", "category": "Vegetables", "quantity": "6", "is_packaged": false},
+  {"name": "Spinach (Palak)", "category": "Vegetables", "quantity": "1 bunch", "is_packaged": false},
+  {"name": "Paneer", "category": "Dairy", "quantity": "200g", "is_packaged": false},
+  {"name": "Basmati Rice", "category": "Grains", "quantity": "2 kg", "is_packaged": false},
+  {"name": "Toor Dal", "category": "Proteins", "quantity": "500g", "is_packaged": false},
+  {"name": "Eggs", "category": "Proteins", "quantity": "6", "is_packaged": false},
+  {"name": "Ginger-Garlic Paste", "category": "Spices", "quantity": "small jar", "is_packaged": true},
+  {"name": "Turmeric Powder", "category": "Spices", "quantity": "100g", "is_packaged": true},
+  {"name": "Maggi Masala Noodles", "category": "Packaged", "quantity": "4 packs", "is_packaged": true},
+  {"name": "Haldiram Bhujia", "category": "Packaged", "quantity": "1 pack", "is_packaged": true},
+  {"name": "Parle-G Biscuits", "category": "Packaged", "quantity": "1 pack", "is_packaged": true},
+  {"name": "Lay's Classic Salted", "category": "Packaged", "quantity": "1 small", "is_packaged": true},
+  {"name": "Curd (Dahi)", "category": "Dairy", "quantity": "500ml", "is_packaged": false},
+  {"name": "Whole Wheat Atta", "category": "Grains", "quantity": "5 kg", "is_packaged": false},
+  {"name": "Mustard Oil", "category": "Pantry", "quantity": "1L", "is_packaged": true},
+  {"name": "Green Chili", "category": "Vegetables", "quantity": "10", "is_packaged": false},
+  {"name": "Lemon", "category": "Vegetables", "quantity": "4", "is_packaged": false}
+]

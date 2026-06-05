@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local app data & secrets
+.env
+data/nutriplan.db
+
+# Frontend (Next.js)
+frontend/node_modules/
+frontend/.next/
+frontend/.env*.local
+frontend/out/
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/

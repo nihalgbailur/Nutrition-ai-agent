@@ -1,0 +1,31 @@
+# Synthetic recipe catalog for NutriPlan AI
+
+RECIPE: Palak Paneer with Jeera Rice
+CUISINE: North Indian
+TIME: 40 min
+INGREDIENTS: spinach, paneer, basmati rice, onion, tomato
+NOTE: Balanced vegetarian dinner; uses fresh greens.
+
+RECIPE: Sambar with Vegetables
+CUISINE: South Indian
+TIME: 55 min
+INGREDIENTS: toor dal, drumstick, carrot, tomato, tamarind
+NOTE: High fiber lunch; pairs with idli or rice.
+
+RECIPE: Masala Omelette with Toast
+CUISINE: North Indian
+TIME: 15 min
+INGREDIENTS: eggs, onion, green chili, atta
+NOTE: Quick protein breakfast; skip if egg allergy.
+
+RECIPE: Moong Dal Khichdi
+CUISINE: North Indian
+TIME: 35 min
+INGREDIENTS: moong dal, rice, ghee, cumin
+NOTE: Comfort food; easy for children.
+
+RECIPE: Curd Rice
+CUISINE: South Indian
+TIME: 20 min
+INGREDIENTS: cooked rice, curd, curry leaves, mustard
+NOTE: Cooling meal; not for strict dairy allergy.

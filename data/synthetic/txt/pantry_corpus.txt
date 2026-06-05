@@ -1,0 +1,8 @@
+# Synthetic pantry inventory lines (Indian household)
+
+Fresh vegetables: onion 1kg, tomato 750g, potato 1kg, spinach 2 bunches, carrot 500g, cauliflower 1, green chili 12, lemon 6.
+Proteins: toor dal 1kg, moong dal 500g, chana dal 500g, eggs 12, paneer 400g.
+Grains: basmati rice 2kg, whole wheat atta 5kg, poha 500g, oats 500g.
+Dairy: curd 1L, milk 1L, amul butter 100g.
+Packaged flagged items: maggi masala 4 packs, haldiram bhujia 400g, parle-g 2 packs, lays 1 pack, kurkure 1 pack, coca-cola 2 bottles, kelloggs chocos 375g.
+Spices: turmeric, red chili, coriander, garam masala, cumin, mustard oil 1L.

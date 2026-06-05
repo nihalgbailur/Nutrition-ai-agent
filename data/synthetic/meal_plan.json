@@ -1,0 +1,70 @@
+{
+  "variety_notes": "Synthetic week mixing North and South Indian home-style meals.",
+  "leftover_strategy": "Reuse dal and rice for next-day lunch where noted.",
+  "compromises": "Packaged snacks limited; weekday dinners under 45 minutes.",
+  "days": [
+    {
+      "day_index": 0,
+      "day_label": "Monday",
+      "meals": [
+        {"slot": "breakfast", "recipe_name": "Masala Omelette with Toast"},
+        {"slot": "lunch", "recipe_name": "Sambar with Vegetables"},
+        {"slot": "dinner", "recipe_name": "Palak Paneer with Jeera Rice"}
+      ]
+    },
+    {
+      "day_index": 1,
+      "day_label": "Tuesday",
+      "meals": [
+        {"slot": "breakfast", "recipe_name": "Moong Dal Khichdi"},
+        {"slot": "lunch", "recipe_name": "Curd Rice (Thayir Sadam)", "notes": "Use leftover rice if available"},
+        {"slot": "dinner", "recipe_name": "Aloo Gobi Dry Sabzi"}
+      ]
+    },
+    {
+      "day_index": 2,
+      "day_label": "Wednesday",
+      "meals": [
+        {"slot": "breakfast", "recipe_name": "Masala Omelette with Toast"},
+        {"slot": "lunch", "recipe_name": "Vegetable Pulao"},
+        {"slot": "dinner", "recipe_name": "Chana Masala"}
+      ]
+    },
+    {
+      "day_index": 3,
+      "day_label": "Thursday",
+      "meals": [
+        {"slot": "breakfast", "recipe_name": "Moong Dal Khichdi"},
+        {"slot": "lunch", "recipe_name": "Sambar with Vegetables", "uses_leftovers_from": "dinner"},
+        {"slot": "dinner", "recipe_name": "Palak Paneer with Jeera Rice"}
+      ]
+    },
+    {
+      "day_index": 4,
+      "day_label": "Friday",
+      "meals": [
+        {"slot": "breakfast", "recipe_name": "Curd Rice (Thayir Sadam)"},
+        {"slot": "lunch", "recipe_name": "Aloo Gobi Dry Sabzi"},
+        {"slot": "dinner", "recipe_name": "Vegetable Pulao"}
+      ]
+    },
+    {
+      "day_index": 5,
+      "day_label": "Saturday",
+      "meals": [
+        {"slot": "breakfast", "recipe_name": "Masala Omelette with Toast"},
+        {"slot": "lunch", "recipe_name": "Chana Masala"},
+        {"slot": "dinner", "recipe_name": "Sambar with Vegetables"}
+      ]
+    },
+    {
+      "day_index": 6,
+      "day_label": "Sunday",
+      "meals": [
+        {"slot": "breakfast", "recipe_name": "Moong Dal Khichdi"},
+        {"slot": "lunch", "recipe_name": "Palak Paneer with Jeera Rice"},
+        {"slot": "dinner", "recipe_name": "Aloo Gobi Dry Sabzi", "notes": "Light dinner before week start"}
+      ]
+    }
+  ]
+}

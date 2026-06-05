@@ -1,0 +1,205 @@
+{
+  "knowledge_base_version": "1.0",
+  "last_updated": "2026-06-05",
+  "description": "Curated list of commonly consumed Indian packaged foods with nutritional concerns (high sugar, fats, sodium, refined carbs, additives) and better alternatives. For use in NutriPlan AI agents to give smarter, context-aware suggestions.",
+  "categories": {
+    "Biscuits_Cookies": {
+      "poor_choices": [
+        {
+          "product": "Parle-G Original",
+          "brand": "Parle",
+          "concerns": ["very_high_refined_carb", "high_sugar", "low_fiber", "maida_based"],
+          "why_problematic": "Classic glucose biscuit — extremely high in refined flour and sugar. Very low nutritional value. Often consumed in large quantities daily in India."
+        },
+        {
+          "product": "Britannia Good Day",
+          "brand": "Britannia",
+          "concerns": ["high_sugar", "high_fat", "refined_flour", "palm_oil"],
+          "why_problematic": "Marketed as healthy but still high in sugar and fat. Many variants use palm oil."
+        },
+        {
+          "product": "Britannia Marie Gold",
+          "brand": "Britannia",
+          "concerns": ["high_refined_carb", "added_sugar", "low_protein"],
+          "why_problematic": "Popular tea biscuit but mostly refined carbs with little nutrition."
+        },
+        {
+          "product": "Hide & Seek Fab",
+          "brand": "Parle",
+          "concerns": ["high_sugar", "high_fat", "chocolate_coating", "additives"],
+          "why_problematic": "High calorie, sugar, and fat. Popular with kids."
+        }
+      ],
+      "better_alternatives": [
+        {
+          "product": "Millet Cookies (Ragi/Jowar)",
+          "brand": "Slurrp Farm / Lo! Foods / Eat Better Co",
+          "concerns": ["lower_refined_carb", "higher_fiber", "no_maida"],
+          "why_better": "Made with millets, often lower sugar or jaggery, higher fiber and nutrients. Better choice for everyday snacking."
+        },
+        {
+          "product": "Whole Wheat / Oats Biscuits (low sugar variants)",
+          "brand": "Various (check labels)",
+          "concerns": ["better_fiber", "lower_glycemic"],
+          "why_better": "Choose ones with <5g sugar per serving and whole grains. Still consume in moderation."
+        },
+        {
+          "product": "Ragi Cookies (no added sugar)",
+          "brand": "Some local/artisanal or new brands",
+          "concerns": ["high_fiber", "mineral_rich"],
+          "why_better": "Good source of calcium and fiber from ragi."
+        }
+      ]
+    },
+    "Savory_Snacks_Namkeen_Chips": {
+      "poor_choices": [
+        {
+          "product": "Haldiram's All in One / Bhujia / Sev",
+          "brand": "Haldiram's",
+          "concerns": ["very_high_sodium", "high_fat", "fried", "additives", "palm_oil"],
+          "why_problematic": "Extremely popular but very high in sodium (often 700-900mg per 100g) and fried in palm oil. Major contributor to daily salt intake."
+        },
+        {
+          "product": "Kurkure / Lay's / Bingo Chips",
+          "brand": "ITC / PepsiCo",
+          "concerns": ["high_sodium", "high_fat", "refined_carb", "artificial_flavors", "additives"],
+          "why_problematic": "High in salt, fat, and ultra-processed. Designed to be hyper-palatable."
+        },
+        {
+          "product": "Mixtures & Chanachur (various local brands)",
+          "brand": "Local / Haldiram's style",
+          "concerns": ["high_sodium", "fried", "high_calorie_density"],
+          "why_problematic": "Often fried in reused oil and loaded with salt."
+        }
+      ],
+      "better_alternatives": [
+        {
+          "product": "Roasted Makhana (plain or lightly spiced)",
+          "brand": "Various (Farmley, Nutraj, or local)",
+          "concerns": ["low_fat", "good_protein", "high_fiber"],
+          "why_better": "Much lower in sodium and fat when not heavily flavored. Good volume snacking option."
+        },
+        {
+          "product": "Baked Millet Puffs / Jowar Puffs",
+          "brand": "Slurrp Farm, Eat Better Co, Taali",
+          "concerns": ["baked_not_fried", "whole_grain", "lower_sodium_options"],
+          "why_better": "Baked instead of fried, made from millets. Significantly better nutritional profile."
+        },
+        {
+          "product": "Roasted Chana / Gram",
+          "brand": "Various",
+          "concerns": ["high_protein", "high_fiber", "low_fat"],
+          "why_better": "Traditional, high protein, satisfying snack when not over-salted."
+        },
+        {
+          "product": "Baked Ragi / Bajra Crackers",
+          "brand": "Emerging healthy snack brands",
+          "concerns": ["high_fiber", "baked", "mineral_rich"],
+          "why_better": "Better than fried namkeen for regular consumption."
+        }
+      ]
+    },
+    "Instant_Noodles_Pasta": {
+      "poor_choices": [
+        {
+          "product": "Maggi 2-Minute Noodles (Masala)",
+          "brand": "Nestlé India",
+          "concerns": ["very_high_sodium", "refined_carb", "additives", "palm_oil", "low_fiber"],
+          "why_problematic": "Extremely high sodium (often 1000+ mg per pack). Very popular with children and students. Major source of ultra-processed food in Indian diets."
+        },
+        {
+          "product": "Top Ramen / Yippee Noodles",
+          "brand": "ITC / Others",
+          "concerns": ["high_sodium", "refined_flour", "additives"],
+          "why_problematic": "Similar issues to Maggi — high salt and low nutrition."
+        }
+      ],
+      "better_alternatives": [
+        {
+          "product": "Whole Wheat / Millet Noodles or Pasta",
+          "brand": "Some brands (check labels)",
+          "concerns": ["higher_fiber", "better_carbs"],
+          "why_better": "Choose whole grain versions when available. Still limit frequency due to sodium in seasoning."
+        },
+        {
+          "product": "Homemade vegetable-loaded noodles/pasta",
+          "brand": "Home cooked",
+          "concerns": ["controllable_sodium", "added_vegetables", "better_nutrition"],
+          "why_better": "Best option — use minimal seasoning and load with vegetables."
+        }
+      ]
+    },
+    "Beverages": {
+      "poor_choices": [
+        {
+          "product": "Soft Drinks (Coca-Cola, Pepsi, Sprite, etc.)",
+          "brand": "Coca-Cola / PepsiCo",
+          "concerns": ["very_high_sugar", "empty_calories", "acidic", "additives"],
+          "why_problematic": "Major source of added sugar. Linked to obesity, diabetes risk."
+        },
+        {
+          "product": "Packaged Fruit Juices (many brands)",
+          "brand": "Various (Real, Tropicana, etc.)",
+          "concerns": ["high_sugar", "low_fiber", "pasteurized"],
+          "why_problematic": "Often have as much sugar as soft drinks. Lack the fiber of whole fruit."
+        },
+        {
+          "product": "Tang / Other Powdered Drinks",
+          "brand": "Kraft Heinz / Others",
+          "concerns": ["high_sugar", "artificial_colors", "additives"],
+          "why_problematic": "Common in Indian households, especially with kids. High sugar with almost no nutrition."
+        }
+      ],
+      "better_alternatives": [
+        {
+          "product": "Buttermilk (Chaas) / Tender Coconut Water",
+          "brand": "Fresh / Amul (for packaged chaas)",
+          "concerns": ["natural", "electrolytes", "probiotics"],
+          "why_better": "Traditional, hydrating, and much lower in sugar."
+        },
+        {
+          "product": "Infused Water / Homemade Lemon Water",
+          "brand": "Home prepared",
+          "concerns": ["no_added_sugar", "hydration"],
+          "why_better": "Best everyday option."
+        },
+        {
+          "product": "Unsweetened Green Tea / Herbal Tea",
+          "brand": "Various",
+          "concerns": ["low_calorie", "antioxidants"],
+          "why_better": "Good alternative to sugary drinks."
+        }
+      ]
+    },
+    "Breakfast_Cereals": {
+      "poor_choices": [
+        {
+          "product": "Many Corn Flakes / Rice Flakes with added sugar",
+          "brand": "Kellogg's / Local brands",
+          "concerns": ["high_sugar", "refined_carb", "low_fiber"],
+          "why_problematic": "Many 'healthy' cereals in India are still high in sugar."
+        }
+      ],
+      "better_alternatives": [
+        {
+          "product": "Oats (plain rolled oats)",
+          "brand": "Quaker / Saffola / Local",
+          "concerns": ["high_fiber", "beta_glucan", "versatile"],
+          "why_better": "Plain oats are excellent. Avoid pre-sweetened flavored versions."
+        },
+        {
+          "product": "Millet Flakes / Poha (homemade style)",
+          "brand": "Various",
+          "concerns": ["whole_grain", "higher_nutrients"],
+          "why_better": "Traditional and more nutritious than many packaged cereals."
+        }
+      ]
+    }
+  },
+  "general_guidelines_for_agents": {
+    "when_user_has_many_poor_choices": "Gently suggest swapping 1-2 items with better alternatives from the same category. Do not shame the user.",
+    "allergy_note": "Always cross-check with user's declared allergies before suggesting any product.",
+    "frequency_advice": "Even 'better' packaged options should be consumed in moderation. Prioritize home-cooked whole foods.",
+    "sodium_focus": "Many Indian packaged savory items are extremely high in sodium. Highlight this when relevant for users with blood pressure goals."
+  }
+}

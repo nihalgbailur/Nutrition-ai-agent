@@ -1,0 +1,53 @@
+[
+  {
+    "name": "Nihal",
+    "diet_style": "vegetarian",
+    "health_goal": "maintenance",
+    "allergies": [],
+    "cuisine_preferences": ["North Indian", "South Indian"],
+    "spice_level": "medium",
+    "max_cook_minutes": 30,
+    "budget_level": "medium",
+    "preferred_ingredients": ["dal", "roti", "paneer"],
+    "health_flags": {
+      "has_medical_condition": false,
+      "is_pregnant_or_breastfeeding": false,
+      "cooking_for_children": false,
+      "cooking_for_elderly": false
+    }
+  },
+  {
+    "name": "Rahul",
+    "diet_style": "eggetarian",
+    "health_goal": "muscle_gain",
+    "allergies": ["peanut"],
+    "cuisine_preferences": ["North Indian", "Continental"],
+    "spice_level": "medium",
+    "max_cook_minutes": 45,
+    "budget_level": "low",
+    "preferred_ingredients": ["egg", "chicken", "oats"],
+    "health_flags": {
+      "has_medical_condition": false,
+      "is_pregnant_or_breastfeeding": false,
+      "cooking_for_children": false,
+      "cooking_for_elderly": false
+    }
+  },
+  {
+    "name": "Meera",
+    "diet_style": "vegetarian",
+    "health_goal": "general_health",
+    "allergies": ["dairy"],
+    "cuisine_preferences": ["South Indian", "North Indian"],
+    "spice_level": "mild",
+    "max_cook_minutes": 40,
+    "budget_level": "medium",
+    "preferred_ingredients": ["sambar", "idli", "vegetables"],
+    "health_flags": {
+      "has_medical_condition": false,
+      "is_pregnant_or_breastfeeding": false,
+      "cooking_for_children": true,
+      "cooking_for_elderly": false
+    }
+  }
+]

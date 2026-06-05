@@ -1,0 +1,6 @@
+[
+  {"recipe_name": "Palak Paneer with Jeera Rice", "rating": 5, "cooked": true, "not_suitable": false, "reason": ""},
+  {"recipe_name": "Maggi Masala Noodles", "rating": 2, "cooked": true, "not_suitable": true, "reason": "too processed"},
+  {"recipe_name": "Sambar with Vegetables", "rating": 4, "cooked": true, "not_suitable": false, "reason": ""},
+  {"recipe_name": "Haldiram Bhujia", "rating": 1, "cooked": false, "not_suitable": true, "reason": "limit packaged snacks"}
+]

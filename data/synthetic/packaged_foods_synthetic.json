@@ -1,0 +1,77 @@
+{
+  "knowledge_base_version": "1.1-synthetic",
+  "categories": {
+    "Instant_Foods_Extras": {
+      "poor_choices": [
+        {
+          "product": "Ching's Schezwan Noodles",
+          "brand": "Ching's",
+          "concerns": ["high_sodium", "additives", "refined_carb"],
+          "why_problematic": "Popular Indo-Chinese instant option but high sodium and ultra-processed seasoning."
+        },
+        {
+          "product": "Knorr Soupy Noodles",
+          "brand": "Knorr",
+          "concerns": ["high_sodium", "low_fiber", "additives"],
+          "why_problematic": "Convenient but salty and low in whole-food nutrition."
+        }
+      ],
+      "better_alternatives": [
+        {
+          "product": "Homemade hakka noodles with lots of vegetables",
+          "brand": "Home cooked",
+          "concerns": ["controllable_sodium", "added_vegetables"],
+          "why_better": "Control oil and salt; add cabbage, carrot, capsicum."
+        }
+      ]
+    },
+    "Sweets_Mithai_Packaged": {
+      "poor_choices": [
+        {
+          "product": "Gulab Jamun (canned/tinned)",
+          "brand": "Haldiram's / MTR",
+          "concerns": ["very_high_sugar", "high_fat", "refined_flour"],
+          "why_problematic": "Dense sugar and fat; easy to overeat at festivals."
+        },
+        {
+          "product": "Soan Papdi box",
+          "brand": "Haldiram's / local",
+          "concerns": ["high_sugar", "high_fat", "refined_flour"],
+          "why_problematic": "Flaky sweet with high calories per small piece."
+        }
+      ],
+      "better_alternatives": [
+        {
+          "product": "Fresh fruit with curd",
+          "brand": "Home",
+          "concerns": ["natural_sugars", "fiber", "protein"],
+          "why_better": "Satisfies sweet craving with fiber and less ultra-processing."
+        },
+        {
+          "product": "Dates (2-3) with nuts (if no allergy)",
+          "brand": "Natural",
+          "concerns": ["portion_control"],
+          "why_better": "Traditional energy snack; still watch portions."
+        }
+      ]
+    },
+    "Frozen_Ready_Meals": {
+      "poor_choices": [
+        {
+          "product": "Frozen Veg Burger patties",
+          "brand": "McCain / local",
+          "concerns": ["high_sodium", "refined_carb", "additives"],
+          "why_problematic": "Often deep-fried; high salt for flavor."
+        }
+      ],
+      "better_alternatives": [
+        {
+          "product": "Homemade cutlet with mashed rajma/oats",
+          "brand": "Home cooked",
+          "concerns": ["higher_fiber", "controllable_sodium"],
+          "why_better": "Baked or shallow-fried with known ingredients."
+        }
+      ]
+    }
+  }
+}

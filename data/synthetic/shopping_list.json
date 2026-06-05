@@ -1,0 +1,11 @@
+{
+  "items": [
+    {"name": "Fresh coriander", "category": "Produce", "quantity": "2 bunches", "in_pantry": false},
+    {"name": "Drumstick", "category": "Produce", "quantity": "4", "in_pantry": false},
+    {"name": "Tamarind", "category": "Pantry", "quantity": "100g", "in_pantry": false},
+    {"name": "Sambar powder", "category": "Spices", "quantity": "1 pack", "in_pantry": false},
+    {"name": "Chickpeas dry", "category": "Proteins", "quantity": "500g", "in_pantry": false},
+    {"name": "Capsicum", "category": "Produce", "quantity": "3", "in_pantry": false},
+    {"name": "Brown bread", "category": "Bakery", "quantity": "1 loaf", "in_pantry": false, "suggested_swap": "Whole wheat atta roti instead of packaged bread"}
+  ]
+}

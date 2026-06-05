@@ -1,0 +1,47 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { Toaster } from "sonner";
+import { Providers } from "./providers";
+import { AppShell } from "../components/AppShell";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "NutriPlan AI",
+  description: "Your intelligent kitchen companion — plans meals around what you already have. Premium agentic meal planning for Indian households.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-full flex flex-col bg-[var(--np-bg)]">
+        <Providers>
+          <AppShell>{children}</AppShell>
+        </Providers>
+        <Toaster position="top-center" richColors closeButton />
+      </body>
+    </html>
+  );
+}

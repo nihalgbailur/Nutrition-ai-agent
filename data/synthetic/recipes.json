@@ -1,0 +1,165 @@
+[
+  {
+    "name": "Palak Paneer with Jeera Rice",
+    "ingredients": [
+      {"name": "Spinach", "quantity": "3 cups"},
+      {"name": "Paneer", "quantity": "250g"},
+      {"name": "Basmati Rice", "quantity": "1.5 cups"},
+      {"name": "Onion", "quantity": "1"},
+      {"name": "Tomato", "quantity": "1"}
+    ],
+    "steps": [
+      "Blanch and puree spinach.",
+      "Sauté cumin, onion, ginger-garlic, tomatoes, and spices.",
+      "Add paneer cubes and spinach; simmer 8 minutes.",
+      "Cook jeera rice separately; serve together."
+    ],
+    "prep_minutes": 15,
+    "cook_minutes": 25,
+    "servings": 3,
+    "nutrition": {"calories": 480, "protein_g": 22, "carbs_g": 45, "fat_g": 22},
+    "why_fits": "Uses fresh greens and paneer; balanced vegetarian dinner.",
+    "cuisine_tags": ["North Indian"]
+  },
+  {
+    "name": "Sambar with Vegetables",
+    "ingredients": [
+      {"name": "Toor Dal", "quantity": "1 cup"},
+      {"name": "Drumstick", "quantity": "2"},
+      {"name": "Carrot", "quantity": "2"},
+      {"name": "Tomato", "quantity": "2"},
+      {"name": "Tamarind", "quantity": "small ball"}
+    ],
+    "steps": [
+      "Pressure-cook dal with turmeric.",
+      "Boil vegetables in tamarind water with sambar powder.",
+      "Combine and temper with mustard seeds and curry leaves."
+    ],
+    "prep_minutes": 20,
+    "cook_minutes": 35,
+    "servings": 4,
+    "nutrition": {"calories": 220, "protein_g": 10, "carbs_g": 35, "fat_g": 5},
+    "why_fits": "South Indian staple; high fiber and protein from dal.",
+    "cuisine_tags": ["South Indian"]
+  },
+  {
+    "name": "Vegetable Pulao",
+    "ingredients": [
+      {"name": "Basmati Rice", "quantity": "2 cups"},
+      {"name": "Mixed vegetables", "quantity": "2 cups"},
+      {"name": "Onion", "quantity": "2"},
+      {"name": "Whole spices", "quantity": "1 tbsp"}
+    ],
+    "steps": [
+      "Soak rice 20 minutes.",
+      "Sauté whole spices, onion, vegetables.",
+      "Add rice and water; cook covered until fluffy."
+    ],
+    "prep_minutes": 15,
+    "cook_minutes": 30,
+    "servings": 4,
+    "nutrition": {"calories": 380, "protein_g": 8, "carbs_g": 68, "fat_g": 9},
+    "why_fits": "One-pot meal using pantry staples.",
+    "cuisine_tags": ["North Indian"]
+  },
+  {
+    "name": "Masala Omelette with Toast",
+    "ingredients": [
+      {"name": "Eggs", "quantity": "3"},
+      {"name": "Onion", "quantity": "1 small"},
+      {"name": "Green Chili", "quantity": "1"},
+      {"name": "Whole Wheat Atta", "quantity": "2 rotis worth"}
+    ],
+    "steps": [
+      "Whisk eggs with onion, chili, salt.",
+      "Cook omelette on tawa.",
+      "Serve with fresh roti or toast."
+    ],
+    "prep_minutes": 5,
+    "cook_minutes": 10,
+    "servings": 2,
+    "nutrition": {"calories": 320, "protein_g": 20, "carbs_g": 18, "fat_g": 20},
+    "why_fits": "Quick high-protein breakfast for muscle gain goals.",
+    "cuisine_tags": ["North Indian", "Continental"]
+  },
+  {
+    "name": "Moong Dal Khichdi",
+    "ingredients": [
+      {"name": "Moong Dal", "quantity": "1 cup"},
+      {"name": "Basmati Rice", "quantity": "1/2 cup"},
+      {"name": "Ghee", "quantity": "1 tbsp"},
+      {"name": "Cumin", "quantity": "1 tsp"}
+    ],
+    "steps": [
+      "Wash dal and rice together.",
+      "Pressure cook with water and salt.",
+      "Temper with ghee, cumin, asafoetida."
+    ],
+    "prep_minutes": 10,
+    "cook_minutes": 25,
+    "servings": 3,
+    "nutrition": {"calories": 290, "protein_g": 12, "carbs_g": 48, "fat_g": 7},
+    "why_fits": "Easy digest meal; good for family dinners.",
+    "cuisine_tags": ["North Indian"]
+  },
+  {
+    "name": "Aloo Gobi Dry Sabzi",
+    "ingredients": [
+      {"name": "Potato", "quantity": "3 medium"},
+      {"name": "Cauliflower", "quantity": "1 medium"},
+      {"name": "Turmeric", "quantity": "1/2 tsp"},
+      {"name": "Coriander powder", "quantity": "1 tsp"}
+    ],
+    "steps": [
+      "Par-cook cauliflower florets.",
+      "Sauté potatoes with spices until golden.",
+      "Add cauliflower; cook covered 10 minutes."
+    ],
+    "prep_minutes": 15,
+    "cook_minutes": 25,
+    "servings": 4,
+    "nutrition": {"calories": 180, "protein_g": 5, "carbs_g": 32, "fat_g": 4},
+    "why_fits": "Budget-friendly dry sabzi using common vegetables.",
+    "cuisine_tags": ["North Indian"]
+  },
+  {
+    "name": "Curd Rice (Thayir Sadam)",
+    "ingredients": [
+      {"name": "Cooked rice", "quantity": "3 cups"},
+      {"name": "Curd", "quantity": "1.5 cups"},
+      {"name": "Curry leaves", "quantity": "10"},
+      {"name": "Mustard seeds", "quantity": "1 tsp"}
+    ],
+    "steps": [
+      "Mash warm rice with curd and salt.",
+      "Temper mustard, urad dal, curry leaves.",
+      "Mix and chill 30 minutes optional."
+    ],
+    "prep_minutes": 10,
+    "cook_minutes": 10,
+    "servings": 3,
+    "nutrition": {"calories": 340, "protein_g": 10, "carbs_g": 58, "fat_g": 8},
+    "why_fits": "Cooling lunch option; kid-friendly.",
+    "cuisine_tags": ["South Indian"]
+  },
+  {
+    "name": "Chana Masala",
+    "ingredients": [
+      {"name": "Chickpeas (soaked)", "quantity": "2 cups"},
+      {"name": "Onion", "quantity": "2"},
+      {"name": "Tomato", "quantity": "3"},
+      {"name": "Chana masala powder", "quantity": "2 tbsp"}
+    ],
+    "steps": [
+      "Pressure cook chickpeas until soft.",
+      "Make onion-tomato masala base.",
+      "Simmer chickpeas in masala 15 minutes."
+    ],
+    "prep_minutes": 20,
+    "cook_minutes": 40,
+    "servings": 4,
+    "nutrition": {"calories": 310, "protein_g": 15, "carbs_g": 45, "fat_g": 9},
+    "why_fits": "High protein vegetarian curry.",
+    "cuisine_tags": ["North Indian"]
+  }
+]
