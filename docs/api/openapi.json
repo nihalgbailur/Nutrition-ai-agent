@@ -1,0 +1,1340 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "NutriPlan AI API",
+    "description": "Backend API for the premium Next.js frontend. Reuses the full LangGraph agentic core, safety guardrails, and local SQLite repo.",
+    "version": "1.1.0"
+  },
+  "paths": {
+    "/api/profile": {
+      "get": {
+        "tags": [
+          "profile"
+        ],
+        "summary": "Get Profile",
+        "operationId": "get_profile_api_profile_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/UserProfile"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Response Get Profile Api Profile Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "profile"
+        ],
+        "summary": "Save Profile",
+        "operationId": "save_profile_api_profile_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserProfile"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserProfile"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/pantry": {
+      "get": {
+        "tags": [
+          "pantry"
+        ],
+        "summary": "List Pantry",
+        "operationId": "list_pantry_api_pantry_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/PantryItem"
+                  },
+                  "type": "array",
+                  "title": "Response List Pantry Api Pantry Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "pantry"
+        ],
+        "summary": "Add Pantry Item",
+        "operationId": "add_pantry_item_api_pantry_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddPantryItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PantryItem"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/pantry/{item_id}": {
+      "delete": {
+        "tags": [
+          "pantry"
+        ],
+        "summary": "Delete Pantry Item",
+        "operationId": "delete_pantry_item_api_pantry__item_id__delete",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Item Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/pantry/sync": {
+      "post": {
+        "tags": [
+          "pantry"
+        ],
+        "summary": "Sync Pantry",
+        "operationId": "sync_pantry_api_pantry_sync_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/recipes": {
+      "get": {
+        "tags": [
+          "recipes"
+        ],
+        "summary": "List Recipes",
+        "operationId": "list_recipes_api_recipes_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/Recipe"
+                  },
+                  "type": "array",
+                  "title": "Response List Recipes Api Recipes Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/recipes/generate": {
+      "post": {
+        "tags": [
+          "recipes"
+        ],
+        "summary": "Generate Recipes",
+        "operationId": "generate_recipes_api_recipes_generate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GenerateRecipesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/plan": {
+      "get": {
+        "tags": [
+          "planner"
+        ],
+        "summary": "Get Latest Plan",
+        "operationId": "get_latest_plan_api_plan_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/WeeklyMealPlan"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Response Get Latest Plan Api Plan Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/plan/generate": {
+      "post": {
+        "tags": [
+          "planner"
+        ],
+        "summary": "Generate Weekly Plan",
+        "operationId": "generate_weekly_plan_api_plan_generate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GeneratePlanRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/shopping": {
+      "get": {
+        "tags": [
+          "shopping"
+        ],
+        "summary": "Get Latest Shopping",
+        "operationId": "get_latest_shopping_api_shopping_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/components/schemas/ShoppingList"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "title": "Response Get Latest Shopping Api Shopping Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/shopping/generate": {
+      "post": {
+        "tags": [
+          "shopping"
+        ],
+        "summary": "Generate Shopping",
+        "operationId": "generate_shopping_api_shopping_generate_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/feedback": {
+      "get": {
+        "tags": [
+          "feedback"
+        ],
+        "summary": "List Feedback",
+        "operationId": "list_feedback_api_feedback_get",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FeedbackRecord"
+                  },
+                  "title": "Response List Feedback Api Feedback Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "feedback"
+        ],
+        "summary": "Submit Feedback",
+        "operationId": "submit_feedback_api_feedback_post",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FeedbackRecord"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/chat": {
+      "post": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "Chat Once",
+        "description": "Non-streaming chat (useful for simple clients or testing).",
+        "operationId": "chat_once_api_chat_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/chat/stream": {
+      "post": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "Chat Stream",
+        "description": "SSE endpoint for token-by-token streaming chat replies.",
+        "operationId": "chat_stream_api_chat_stream_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/system/status": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "System Status",
+        "operationId": "system_status_api_system_status_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/system/seed/demo": {
+      "post": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Seed Demo",
+        "operationId": "seed_demo_api_system_seed_demo_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/system/seed/full": {
+      "post": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Seed Full",
+        "operationId": "seed_full_api_system_seed_full_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/system/reset-generated": {
+      "post": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Reset Generated",
+        "description": "Clear recipes, plans, shopping, feedback, kb cache (keep profile + pantry).",
+        "operationId": "reset_generated_api_system_reset_generated_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AddPantryItem": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category",
+            "default": "Other"
+          },
+          "quantity": {
+            "type": "string",
+            "title": "Quantity",
+            "default": ""
+          },
+          "is_packaged": {
+            "type": "boolean",
+            "title": "Is Packaged",
+            "default": false
+          },
+          "expiry_date": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expiry Date"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "AddPantryItem"
+      },
+      "BudgetLevel": {
+        "type": "string",
+        "enum": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "title": "BudgetLevel"
+      },
+      "ChatRequest": {
+        "properties": {
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "fast_mode": {
+            "type": "boolean",
+            "title": "Fast Mode",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "title": "ChatRequest"
+      },
+      "DayMeals": {
+        "properties": {
+          "day_index": {
+            "type": "integer",
+            "title": "Day Index"
+          },
+          "day_label": {
+            "type": "string",
+            "title": "Day Label"
+          },
+          "meals": {
+            "items": {
+              "$ref": "#/components/schemas/MealSlot"
+            },
+            "type": "array",
+            "title": "Meals"
+          }
+        },
+        "type": "object",
+        "required": [
+          "day_index",
+          "day_label"
+        ],
+        "title": "DayMeals"
+      },
+      "DietStyle": {
+        "type": "string",
+        "enum": [
+          "vegetarian",
+          "vegan",
+          "eggetarian",
+          "non_veg",
+          "jain"
+        ],
+        "title": "DietStyle"
+      },
+      "FeedbackRecord": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "recipe_id": {
+            "type": "string",
+            "title": "Recipe Id"
+          },
+          "recipe_name": {
+            "type": "string",
+            "title": "Recipe Name"
+          },
+          "rating": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 1.0,
+            "title": "Rating"
+          },
+          "cooked": {
+            "type": "boolean",
+            "title": "Cooked",
+            "default": false
+          },
+          "not_suitable": {
+            "type": "boolean",
+            "title": "Not Suitable",
+            "default": false
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "recipe_id",
+          "recipe_name",
+          "rating"
+        ],
+        "title": "FeedbackRecord"
+      },
+      "GeneratePlanRequest": {
+        "properties": {
+          "confirmed": {
+            "type": "boolean",
+            "title": "Confirmed",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "GeneratePlanRequest"
+      },
+      "GenerateRecipesRequest": {
+        "properties": {
+          "query": {
+            "type": "string",
+            "title": "Query",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "GenerateRecipesRequest"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HealthFlags": {
+        "properties": {
+          "has_medical_condition": {
+            "type": "boolean",
+            "title": "Has Medical Condition",
+            "default": false
+          },
+          "medical_notes": {
+            "type": "string",
+            "title": "Medical Notes",
+            "default": ""
+          },
+          "is_pregnant_or_breastfeeding": {
+            "type": "boolean",
+            "title": "Is Pregnant Or Breastfeeding",
+            "default": false
+          },
+          "cooking_for_children": {
+            "type": "boolean",
+            "title": "Cooking For Children",
+            "default": false
+          },
+          "cooking_for_elderly": {
+            "type": "boolean",
+            "title": "Cooking For Elderly",
+            "default": false
+          },
+          "requires_plan_confirmation": {
+            "type": "boolean",
+            "title": "Requires Plan Confirmation",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "HealthFlags"
+      },
+      "HealthGoal": {
+        "type": "string",
+        "enum": [
+          "weight_loss",
+          "muscle_gain",
+          "maintenance",
+          "energy",
+          "general_health"
+        ],
+        "title": "HealthGoal"
+      },
+      "IngredientLine": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "quantity": {
+            "type": "string",
+            "title": "Quantity",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "IngredientLine"
+      },
+      "MealSlot": {
+        "properties": {
+          "slot": {
+            "type": "string",
+            "enum": [
+              "breakfast",
+              "lunch",
+              "dinner",
+              "snack"
+            ],
+            "title": "Slot",
+            "default": "lunch"
+          },
+          "recipe_name": {
+            "type": "string",
+            "title": "Recipe Name"
+          },
+          "recipe_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Recipe Id"
+          },
+          "notes": {
+            "type": "string",
+            "title": "Notes",
+            "default": ""
+          },
+          "uses_leftovers_from": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Uses Leftovers From"
+          }
+        },
+        "type": "object",
+        "required": [
+          "recipe_name"
+        ],
+        "title": "MealSlot"
+      },
+      "NutritionEstimate": {
+        "properties": {
+          "calories": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Calories"
+          },
+          "protein_g": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Protein G"
+          },
+          "carbs_g": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Carbs G"
+          },
+          "fat_g": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fat G"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "default": "Approximate estimates only"
+          }
+        },
+        "type": "object",
+        "title": "NutritionEstimate"
+      },
+      "PantryItem": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category",
+            "default": "Other"
+          },
+          "quantity": {
+            "type": "string",
+            "title": "Quantity",
+            "default": ""
+          },
+          "expiry_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expiry Date"
+          },
+          "is_packaged": {
+            "type": "boolean",
+            "title": "Is Packaged",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "PantryItem"
+      },
+      "Recipe": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "ingredients": {
+            "items": {
+              "$ref": "#/components/schemas/IngredientLine"
+            },
+            "type": "array",
+            "title": "Ingredients"
+          },
+          "steps": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Steps"
+          },
+          "prep_minutes": {
+            "type": "integer",
+            "title": "Prep Minutes",
+            "default": 15
+          },
+          "cook_minutes": {
+            "type": "integer",
+            "title": "Cook Minutes",
+            "default": 20
+          },
+          "servings": {
+            "type": "integer",
+            "title": "Servings",
+            "default": 2
+          },
+          "nutrition": {
+            "$ref": "#/components/schemas/NutritionEstimate"
+          },
+          "why_fits": {
+            "type": "string",
+            "title": "Why Fits",
+            "default": ""
+          },
+          "kb_notes": {
+            "type": "string",
+            "title": "Kb Notes",
+            "default": ""
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer",
+            "default": "**Disclaimer**: This is general meal inspiration only. Nutrition information is approximate and for informational purposes. It is not a substitute for professional medical or dietary advice. If you have any medical condition, are pregnant, breastfeeding, or taking medication, please consult a qualified doctor or registered dietitian before making dietary changes."
+          },
+          "cuisine_tags": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Cuisine Tags"
+          },
+          "contains_allergens": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Contains Allergens"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "ingredients",
+          "steps"
+        ],
+        "title": "Recipe"
+      },
+      "ShoppingList": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/ShoppingListItem"
+            },
+            "type": "array",
+            "title": "Items"
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer",
+            "default": "**Disclaimer**: This is general meal inspiration only. Nutrition information is approximate and for informational purposes. It is not a substitute for professional medical or dietary advice. If you have any medical condition, are pregnant, breastfeeding, or taking medication, please consult a qualified doctor or registered dietitian before making dietary changes."
+          }
+        },
+        "type": "object",
+        "title": "ShoppingList"
+      },
+      "ShoppingListItem": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "category": {
+            "type": "string",
+            "title": "Category",
+            "default": "Other"
+          },
+          "quantity": {
+            "type": "string",
+            "title": "Quantity",
+            "default": "1"
+          },
+          "in_pantry": {
+            "type": "boolean",
+            "title": "In Pantry",
+            "default": false
+          },
+          "suggested_swap": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Suggested Swap"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name"
+        ],
+        "title": "ShoppingListItem"
+      },
+      "SpiceLevel": {
+        "type": "string",
+        "enum": [
+          "mild",
+          "medium",
+          "hot"
+        ],
+        "title": "SpiceLevel"
+      },
+      "UserProfile": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "default": "User"
+          },
+          "diet_style": {
+            "$ref": "#/components/schemas/DietStyle",
+            "default": "vegetarian"
+          },
+          "health_goal": {
+            "$ref": "#/components/schemas/HealthGoal",
+            "default": "maintenance"
+          },
+          "allergies": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Allergies"
+          },
+          "cuisine_preferences": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Cuisine Preferences"
+          },
+          "spice_level": {
+            "$ref": "#/components/schemas/SpiceLevel",
+            "default": "medium"
+          },
+          "max_cook_minutes": {
+            "type": "integer",
+            "title": "Max Cook Minutes",
+            "default": 45
+          },
+          "budget_level": {
+            "$ref": "#/components/schemas/BudgetLevel",
+            "default": "medium"
+          },
+          "health_flags": {
+            "$ref": "#/components/schemas/HealthFlags"
+          },
+          "disliked_ingredients": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Disliked Ingredients"
+          },
+          "preferred_ingredients": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Preferred Ingredients"
+          },
+          "limit_packaged_snacks": {
+            "type": "boolean",
+            "title": "Limit Packaged Snacks",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "UserProfile"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WeeklyMealPlan": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "days": {
+            "items": {
+              "$ref": "#/components/schemas/DayMeals"
+            },
+            "type": "array",
+            "title": "Days"
+          },
+          "variety_notes": {
+            "type": "string",
+            "title": "Variety Notes",
+            "default": ""
+          },
+          "leftover_strategy": {
+            "type": "string",
+            "title": "Leftover Strategy",
+            "default": ""
+          },
+          "compromises": {
+            "type": "string",
+            "title": "Compromises",
+            "default": ""
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer",
+            "default": "**Disclaimer**: This is general meal inspiration only. Nutrition information is approximate and for informational purposes. It is not a substitute for professional medical or dietary advice. If you have any medical condition, are pregnant, breastfeeding, or taking medication, please consult a qualified doctor or registered dietitian before making dietary changes."
+          }
+        },
+        "type": "object",
+        "title": "WeeklyMealPlan"
+      }
+    }
+  }
+}

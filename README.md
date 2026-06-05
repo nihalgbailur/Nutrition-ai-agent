@@ -146,6 +146,24 @@ npm run build
 
 All user data lives locally in `data/nutriplan.db`. Only LLM inference calls (when configured) leave your machine.
 
+## Documentation
+
+Comprehensive documentation is maintained in the `docs/` folder:
+
+- **[docs/README.md](docs/README.md)** — Documentation index and overview
+- **[API Reference](docs/api/api-reference.md)** — All endpoints, models, and examples (plus the live Swagger UI at `/docs`)
+- **[System Architecture](docs/architecture/system-architecture.md)** — Mermaid diagrams, data flows, component relationships
+- **[User Guide](docs/guides/user-guide.md)** — Step-by-step walkthrough of the premium experience
+- **[Developer Guide](docs/guides/developer-guide.md)** — Setup, extending agents/UI, contribution guidelines
+
+A script is provided to keep the OpenAPI spec in sync:
+
+```bash
+uv run python scripts/generate_openapi.py
+```
+
+The in-app **How it works** page (`/how-it-works`) also contains rich explanations and visuals (including the spices video).
+
 ## License
 
 MIT
